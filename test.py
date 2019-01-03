@@ -19,14 +19,3 @@ def human_read_format(size):
         count += 1
         current = func(cur_num)
     return str(cur_num) + sp[count - 1]
-
-acdvas
-asdvijoif;oweifj
-sf
-sjaskdbvouehslkfnhxlozhcviowencfldxsuiohfenasl
-fesdfjkvfhkedvolvgwe[vasd
-                     svebnaljcvlacs
-                     acasnhclas
-                     casc
-                     scasa]asc
-
