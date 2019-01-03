@@ -15,3 +15,4 @@ ws.write(2, 1, 1)
 ws.write(2, 2, xlwt.Formula("A3+B3"))
 
 wb.save('example.xls')
+let add another code
