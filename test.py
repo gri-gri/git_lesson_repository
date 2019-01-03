@@ -1,12 +1,22 @@
 import xlwt
 from datetime import datetime
+def human_read_format(size):
+    def func(n):
+        sub1 = n // ST
+        sub2 = (n - sub1 * ST) / ST
+        cond = (sub1 > 0)
+        return (sub1 + round(sub2), cond)
 
-style0 = xlwt.easyxf('font: name Times New Roman, color-index red, bold on',
-    num_format_str='#,##0.00')
-sfejsgjldvln dsmvp;
-style1 = xlwt.easyxf(num_format_str='D-MMM-YY')
+    ST = 1024
+    sp = ["Б", "КБ", "МБ", "ГБ", "ТБ", "ПБ", "ЭБ", "ЗБ", "ЙБ"]
 
-wb = xlwt.Workbook()
-ws = wb.add_sheet('A Test Sheet')
+    current = func(size)
+    count = 1
+    cur_num = size
+    while current[1] and count < len(sp):
+        cur_num = current[0]
+        count += 1
+        current = func(cur_num)
+    return str(cur_num) + sp[count - 1]
 
-let add another code
+
